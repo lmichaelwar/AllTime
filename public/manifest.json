@@ -1,7 +1,7 @@
 {
-  "name": "AllTime - Universal Time Widget",
-  "short_name": "AllTime",
-  "description": "A high-precision clock widget featuring UTC, POSIX, local, and binary time displays with NIST sync status",
+  "name": "TheDeclarativeHumanClock",
+  "short_name": "DeclarativeTime",
+  "description": "Declarative time display: UTC, POSIX epoch, and binary. The arbitrary math we share, tied to atomic decay and institutional precision.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1a1a1a",

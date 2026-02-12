@@ -33,7 +33,6 @@ export const BinaryClock: React.FC<BinaryClockProps> = ({ date }) => {
 
   return (
     <div className="flex flex-col gap-2 items-center transition-opacity">
-      <div className="text-xs tracking-[0.3em] mb-1 font-mono text-gray-500 font-bold">BINARY</div>
       <div className="flex gap-2">
         {columns.map((col, colIndex) => (
           <div key={colIndex} className="flex flex-col gap-1">

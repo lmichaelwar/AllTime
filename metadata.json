@@ -1,5 +1,5 @@
 {
-  "name": "AllTime Widget",
-  "description": "A high-precision, monochrome desktop clock widget featuring analog, digital (local/UTC/POSIX), and binary time displays with simulated NIST sync status.",
+  "name": "TheDeclarativeHumanClock",
+  "description": "A declarative clock showing the time we as humans have declared: UTC, POSIX epoch, and binary representation. Because it's as arbitrary as radioactive decay, but it's the math we share.",
   "requestFramePermissions": []
 }
