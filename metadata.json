@@ -1,0 +1,5 @@
+{
+  "name": "AllTime Widget",
+  "description": "A high-precision, monochrome desktop clock widget featuring analog, digital (local/UTC/POSIX), and binary time displays with simulated NIST sync status.",
+  "requestFramePermissions": []
+}
