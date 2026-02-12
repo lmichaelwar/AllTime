@@ -1,36 +1,39 @@
-# AllTime - Universal Time Widget
+# TheDeclarativeHumanClock
 
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-A high-precision, monochrome clock widget featuring UTC as the dominant time display, along with POSIX, Binary, and Local time formats. Built as a Progressive Web App (PWA) for offline support and installation on any device.
+**Declarative time.** The arbitrary but precise math we as humans have declared as time. Tied to radioactive decay and institutional precision. This is where we are as people who have accepted time is relative, but this is the standard we can all reference.
+
+## Philosophy
+
+This isn't just a clock - it's a dashboard for the engine of time itself.
+
+- **UTC**: The bridge between local reality and the declarative standard
+- **POSIX**: The absolute truth. Not "Unix time" (folklore) but POSIX (IEEE 1003.1 statute) - the specific rules that declare what time IS for the machine
+- **Binary**: The silent system heartbeat showing UTC in raw form
+- **Local**: The "big dumb clock" for the biological mammal - your meatspace interface
+
+It's as arbitrary as fuck, but it's the math we share.
 
 ## Features
 
-- 🌍 **UTC Time Dominant** - The universal time standard takes center stage
-- 🕰️ **Multiple Time Formats**:
-  - UTC (Coordinated Universal Time) - Primary display with milliseconds
-  - POSIX Timestamp - Unix epoch time
-  - Binary Clock - Visual binary representation of UTC time
-  - Local Time - Your timezone (less prominent by design)
+- ⚛️ **POSIX Time** - The statute, not the folklore. Millisecond-precision float showing time as continuous
+- 🌍 **UTC Time** - ISO 8601 date format (`2026-02-12`) with milliseconds
+- 🔢 **Binary Display** - Unlabeled. If you know, you know. UTC in pure binary.
+- 📡 **NIST Citation** - Ultra-tiny sync indicator citing the atomic source
+- 🕰️ **Local Time** - The big analog clock because humans are local first
 - 📱 **Progressive Web App** - Install on any device, works offline
-- ⚡ **Real-time Sync** - NIST time sync indicator
-- 🎨 **Analog Clock** - Classic analog display showing local time
-- 📐 **Responsive Design** - Works beautifully on desktop, tablet, and mobile
-- 🌙 **Dark Theme** - Easy on the eyes in any lighting condition
-
-## Live Demo
-
-Visit the live app: [https://lmichaelwar.github.io/AllTime/](https://lmichaelwar.github.io/AllTime/)
+- 🌙 **Stark Electromechanical Design** - Looks like rack-mounted hardware
 
 ## Screenshots
 
 **Desktop:**
-![Desktop View](https://github.com/user-attachments/assets/c68916c7-9824-4e12-b6c7-b2c2a6610c70)
+![Desktop View](https://github.com/user-attachments/assets/becb058c-b052-42b9-9499-baa4b1c4543f)
 
 **Mobile:**
-![Mobile View](https://github.com/user-attachments/assets/c64e0592-b8a0-4ca7-a7dc-b64c95091f7f)
+![Mobile View](https://github.com/user-attachments/assets/5b48460c-adb7-42f0-85f5-8181750011dd)
 
 ## Run Locally
 
@@ -84,9 +87,27 @@ This repository is configured to automatically deploy to GitHub Pages when you p
 
 The site will be available at: `https://<username>.github.io/AllTime/`
 
+## The Declarative Hierarchy
+
+This clock respects a specific hierarchy of time displays:
+
+1. **Local Time (Analog + 24h)** - Biological/social reality. Takes up the most real estate because this is where you physically exist. The "big dumb clock" for scheduling dentist appointments and meeting mammals at a specific time.
+
+2. **UTC** - The bridge time. Declarative standard with ISO 8601 date (`2026-02-12`) and millisecond precision. This is the frame we all reference.
+
+3. **POSIX** - The absolute declarative truth. Not "Unix time" (folklore) - POSIX is the IEEE 1003.1 statute that defines how time is calculated. Shows as continuous float with milliseconds (`1770866635.290`) because time doesn't click, it flows.
+
+4. **Binary** - The silent heartbeat. No label. Just raw UTC in binary. If you know, you know. Reinforces that UTC is the base signal.
+
+### Why POSIX, not UNIX?
+
+"Unix time" is cultural shorthand. **POSIX** is the actual standard (IEEE 1003.1) that declares the rules. Crucially, it defines how the system ignores leap seconds to keep the timeline linear. It's the statute, not the folklore.
+
+Labeling it "Unix Time" is like labeling a precise caliper "Ruler."
+
 ## PWA Features
 
-AllTime is a Progressive Web App with:
+TheDeclarativeHumanClock is a Progressive Web App with:
 
 - 📲 **Installable** - Add to home screen on any device
 - 🔌 **Offline Support** - Works without internet connection via service worker
@@ -145,15 +166,17 @@ AllTime/
 - **Escape** - Reset view
 - **Ctrl+M** - Toggle fullscreen
 
-## Time Format Philosophy
+## Design Philosophy
 
-Following the principle that "UTC should be the dominant time," this app prioritizes universal time standards:
+This is a dashboard for the engine of time, not just a display of the current schedule. 
 
-1. **UTC** - The primary, most privileged time display
-2. **POSIX & Binary** - Co-equal "ultimate times" representing universal standards
-3. **Local Time** - Present but less prominent, acknowledging local context
+**Visual Execution:**
+- **NIST Citation**: Ultra-tiny green dot (1px) with dim "NIST" text (10px, opacity 0.4). Looks silk-screened onto rack-mounted hardware. This isn't "I have internet" - this is a signal lock to the atomic standard.
+- **ISO 8601 Date**: `2026-02-12` looks like a stamped serial number or log entry. Fits the electromechanical aesthetic.
+- **Milliseconds**: Rapid flickering makes it feel like an instrument that's running, not just updating. The continuous float on POSIX reinforces that time doesn't click - it flows.
+- **Silent Binary**: No label. Just let the raw LEDs exist as the system heartbeat.
 
-The analog clock displays local time, maintaining the connection between the universal digital times and your local context.
+A clock with seconds updates. A clock with milliseconds **runs**.
 
 ## Contributing
 
