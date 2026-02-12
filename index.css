@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+  margin: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,19 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#1a1a1a"/>
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#e5e5e5" stroke-width="8"/>
+  <!-- Clock ticks -->
+  <line x1="256" y1="76" x2="256" y2="96" stroke="#e5e5e5" stroke-width="8"/>
+  <line x1="256" y1="416" x2="256" y2="436" stroke="#e5e5e5" stroke-width="8"/>
+  <line x1="76" y1="256" x2="96" y2="256" stroke="#e5e5e5" stroke-width="8"/>
+  <line x1="416" y1="256" x2="436" y2="256" stroke="#e5e5e5" stroke-width="8"/>
+  <!-- Hour hand -->
+  <line x1="256" y1="256" x2="256" y2="156" stroke="#e5e5e5" stroke-width="12" stroke-linecap="round"/>
+  <!-- Minute hand -->
+  <line x1="256" y1="256" x2="316" y2="196" stroke="#e5e5e5" stroke-width="8" stroke-linecap="round"/>
+  <!-- Second hand -->
+  <line x1="256" y1="256" x2="336" y2="256" stroke="#00ff00" stroke-width="4" stroke-linecap="round"/>
+  <!-- Center -->
+  <circle cx="256" cy="256" r="12" fill="#e5e5e5"/>
+  <!-- UTC text -->
+  <text x="256" y="360" font-family="monospace" font-size="48" fill="#e5e5e5" text-anchor="middle" font-weight="bold">UTC</text>
+</svg>

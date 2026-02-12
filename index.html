@@ -4,58 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#1a1a1a" />
-    <meta name="description" content="AllTime Clock Widget" />
-    <title>AllTime Widget</title>
+    <meta name="description" content="AllTime - Universal Time Widget with UTC, POSIX, and Binary Time" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AllTime" />
+    <title>AllTime - Universal Time Widget</title>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'widget-bg': '#1a1a1a',
-              'widget-fg': '#e5e5e5',
-              'nist-green': '#00ff00',
-              'nist-off': '#1f2f1f',
-            },
-            fontFamily: {
-              mono: ['"Share Tech Mono"', 'monospace'],
-              sans: ['"Inter"', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
     
-    <!-- Fonts: Share Tech Mono for the digital look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
-    <style>
-      body {
-        background-color: #1a1a1a;
-        margin: 0;
-        overflow: hidden; /* Prevent scrollbars for widget feel */
-      }
-      /* Custom Scrollbar hide */
-      ::-webkit-scrollbar {
-        display: none;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
-</head>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+  </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful:', registration.scope);
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed:', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

@@ -5,9 +5,10 @@ interface BinaryClockProps {
 }
 
 export const BinaryClock: React.FC<BinaryClockProps> = ({ date }) => {
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  // Use UTC time for binary clock (universal time)
+  const hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  const seconds = date.getUTCSeconds();
 
   const getBits = (val: number) => {
     const tens = Math.floor(val / 10);
@@ -31,8 +32,8 @@ export const BinaryClock: React.FC<BinaryClockProps> = ({ date }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-1 items-center opacity-70 hover:opacity-100 transition-opacity">
-      <div className="text-[10px] tracking-[0.4em] mb-1 font-mono text-gray-500">BINARY</div>
+    <div className="flex flex-col gap-2 items-center transition-opacity">
+      <div className="text-xs tracking-[0.3em] mb-1 font-mono text-gray-500 font-bold">BINARY</div>
       <div className="flex gap-2">
         {columns.map((col, colIndex) => (
           <div key={colIndex} className="flex flex-col gap-1">
@@ -42,15 +43,15 @@ export const BinaryClock: React.FC<BinaryClockProps> = ({ date }) => {
               const isPossible = (col.label === 'H' && bit > 2) || (col.label === 'M' && bit > 4) || (col.label === 'S' && bit > 4) ? false : true;
               
               if (!isPossible) {
-                  return <div key={bit} className="w-3 h-3" />; // Spacer
+                  return <div key={bit} className="w-4 h-4" />; // Spacer
               }
 
               const isOn = (col.val & bit) === bit;
               return (
                 <div
                   key={bit}
-                  className={`w-3 h-3 rounded-sm transition-colors duration-200 ${
-                    isOn ? 'bg-widget-fg shadow-[0_0_4px_rgba(229,229,229,0.5)]' : 'bg-gray-800'
+                  className={`w-4 h-4 rounded-sm transition-colors duration-200 ${
+                    isOn ? 'bg-widget-fg shadow-[0_0_6px_rgba(229,229,229,0.6)]' : 'bg-gray-800'
                   }`}
                 />
               );
